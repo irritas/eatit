@@ -1,16 +1,17 @@
 var mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const Schedma = mongoose.Schema;
 
 var recipeSchema = new mongoose.Schema({
 	title: {
 		type: String,
 		required: true
 	},
+	image: String,
 	ingredients: {
 		type: [String],
 		required: true
 	},
-	description: String,
+	instructions: String,
 	rating: {
 		type: Number,
 		default: 0
@@ -19,7 +20,7 @@ var recipeSchema = new mongoose.Schema({
 		type: Date,
 		default: Date.now
 	},
-	comments: [{
+	reviews: [{
 		type: Schema.Types.ObjectId,
 		ref: 'Comment'
 	}],

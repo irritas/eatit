@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<% if (user) { %>
+	<form id="new-recipe" action="/recipes" method="POST">
+		<label>Title:</label>
+		<input type="text" name="title" required>
+		<label>Image URL:</label>
+		<input type="url" name="image">
+		<label>Ingredients:</label>
+		<textarea name="ingredients" rows="10" required placeholder="Use the following format:&#10;Ingredient, Amount&#10;&#10;Example:&#10;Salt, 1tbsp&#10;Pepper, 3tsp"></textarea>
+		<label>Instructions:</label>
+		<textarea name="instructions" rows="20" required placeholder="Enter instructions here"></textarea>
+		<input type="submit" value="Add Recipe">
+	</form>
+<% } else { %>
+	<div class="denied">ACCESS DENIED</div>
+<% } %>
+<%- include('../partials/footer') %>

@@ -5,17 +5,9 @@ var userSchema = new mongoose.Schema({
 	name: String,
 	email: String,
 	avatar: String,
-	recipes: [{
+	liked: [{
 		type: Schema.Types.ObjectId,
 		ref: 'Recipe'
-	}],
-	likes: [{
-		type: Schema.Types.ObjectId,
-		ref: 'Recipe'
-	}],
-	comments: [{
-		type: Schema.Types.ObjectId,
-		ref: 'Comment'
 	}],
 	googleId: String
 }, {
