@@ -1,12 +1,12 @@
 const Recipe = require('../models/recipe');
 
 module.exports = {
-  index
+	index
 };
 
 function index(req, res, next) {
-    res.render('recipes/index', {
-        title: 'All Recipes',
-        user: res.locals.user
-    });
+	res.render('recipes/index', {
+		title: 'All Recipes',
+		user: res.locals.user
+	});
 }
