@@ -1,11 +1,14 @@
 <%- include('../partials/header') %>
 
-<h3>by <%= owner.name %></h3>
-<% if (recipe.rating) { %>
-	<h5>Rating: <%= recipe.rating %></h5> 
-<% } else { %>
-	<h5>No Ratings Yet!</h5>
-<% } %> 
+<div class="author-score">
+	<h2 class="owner">by <%= owner.name %></h2>
+	<% if (recipe.rating) { %>
+		<h2>Rating: <%= recipe.rating %></h5> 
+	<% } else { %>
+		<h2>No Ratings Yet!</h5>
+	<% } %>
+</div>
+
 <div>
 	<h2>Ingredients:</h2>
 	<table>
@@ -25,15 +28,18 @@
 		</tbody>
 	</table>
 </div>
+<br>
+
 <div>
 	<h2>Instructions</h2>
 	<p><%= recipe.instructions %></p>
 </div>
+<br>
 
 <% if (owner._id.equals(user && user._id)) { %>
 	<div class="modify">
 		<form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
-			<button type="submit">Delete Recipe</button>
+			<input type="submit" value="Delete Recipe">
 		</form>
 	</div>
 <% } %>
@@ -50,16 +56,17 @@
 				<option value="1">1</option>
 			</select>
 			<textarea name="content" rows="4" required placeholder="Enter comments here"></textarea>
+			<br>
 			<input type="submit" value="Add Review">
 		</form>
 	<% } %>
 	<% if (!reviews.length) { %>
-		<h5>None yet!</h5>
+		<h3>None yet!</h3>
 	<% } %> 
 	<% reviews.forEach(review => { %>
 		<div class="container">
 			<span class="rating"><%= review.rating %></span>
-			<span><%= review.content %></span>
+			<span class="content"><%= review.content %></span>
 		</div>
 	<% }) %>
 </div>

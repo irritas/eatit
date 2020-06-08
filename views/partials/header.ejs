@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<title><%= title %></title>
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
 </head>
 <body>
     <nav>
-		<div id="nav-left">
-			<span class="logo">EATIT</span>
-			<a href="/recipes">All Recipes</a>
-			<% if (user) { %>
-				<a href="/recipes/new">Add Recipe</a>
-				<a href="/users/<%= user._id %>">Profile</a>
-			<% } %>
-		</div>
-        <div id="nav-right">
+		<div class="logo">EATIT</div>
+		<div><a href="/recipes">All Recipes</a></div>
+		<% if (user) { %>
+			<div><a href="/recipes/new">Add Recipe</a></div>
+			<div><a href="/users/<%= user._id %>">Profile</a></div>
+		<% } %>
+        <div class="nav-right">
 			<% if (user) { %>
 				<a href="/logout">Log Out</a>
 			<% } else { %>

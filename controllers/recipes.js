@@ -53,11 +53,13 @@ function show(req, res) {
 		.populate('User').exec((err, recipe) => {
 			User.findById(recipe.owner, (err, owner) => {
 				Review.find({recipe: recipe._id}, function(err, reviews) {
-					let sum = reviews.reduce((acc, cur) => {
-						return acc += cur.rating;
-					}, 0);
-					recipe.rating = sum / reviews.length;
-					recipe.save();
+					if (reviews.length) {
+						let sum = reviews.reduce((acc, cur) => {
+							return acc += cur.rating;
+						}, 0);
+						recipe.rating = (sum / reviews.length).toFixed(1);
+						recipe.save();
+					}
 					res.render('recipes/show', {
 						title: recipe.title,
 						user: res.locals.user,

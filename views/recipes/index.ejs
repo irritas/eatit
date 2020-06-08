@@ -20,7 +20,7 @@
 <div class="recipes">
 	<% recipes.forEach(recipe => { %>
 		<div class="container">
-			<span class="rating"><%= recipe.rating %> </span>
+			<span class="rating"><%= recipe.rating %></span>
 			<a href="/recipes/<%= recipe._id %>" class="title-link"><%= recipe.title %></a>
 		</div>
 	<% }) %>

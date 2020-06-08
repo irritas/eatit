@@ -1,13 +1,14 @@
 <%- include('../partials/header') %>
 
 <% if (user) { %>
-	<form id="new-recipe" action="/recipes" method="POST">
-		<label>Title:</label>
-		<input type="text" name="title" required>
-		<label>Ingredients:</label>
+	<form class="new-recipe" action="/recipes" method="POST">
+		<label>Title: <input type="text" name="title" required></label><br><br>
+		<label>Ingredients:</label><br><br>
 		<textarea name="ingredients" rows="8" required placeholder="Use the following format:&#10;Ingredient, Amount&#10;&#10;Example:&#10;Salt, 1tbsp&#10;Pepper, 3tsp"></textarea>
-		<label>Instructions:</label>
+		<br><br>
+		<label>Instructions:</label><br><br>
 		<textarea name="instructions" rows="16" required placeholder="Enter instructions here"></textarea>
+		<br><br>
 		<input type="submit" value="Add Recipe">
 	</form>
 <% } else { %>

@@ -1,14 +1,160 @@
 body {
-	padding: 50px;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: 'Concert One', cursive;
+	font-size: 3vmin;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	font-weight: 500;
+	background-color: darkgrey;
+}
+
+div {
+	font-size: 3vmin;
 }
 
 a {
-	color: #00B7FF;
+	color: greenyellow;
+	text-decoration: none;
+}
+
+a:hover {
+	color: white;
 }
 
 nav {
+	background-color: indigo;
 	display: flex;
-	justify-content: stretch;
+	justify-content: flex-start;
 	align-items: flex-start;
+	font-family: 'Indie Flower', cursive;
+	font-size: 4vmin;
+	padding: 2vmin;
+}
+
+nav > div {
+	margin: 0 2vmin;
+}
+
+.logo {
+	margin-left: 0;
+	color: white;
+}
+
+.nav-right {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+h1 {
+	text-align: center;
+	font-size: 6vmin;
+	margin: 4vmin;
+	border: thick solid white;
+	background-color: lightskyblue;
+	padding: 2vmin;
+	border-radius: 1vmin;
+}
+
+.container {
+	display: flex;
+	align-items: flex-start;
+	font-size: 5vmin;
+	border: thick solid white;
+	background-color: lightskyblue;
+	padding: 1vmin;
+	margin: 4vmin;
+	border-radius: 1vmin;
+}
+
+h2, .modify {
+	margin-left: 5vmin;
+}
+
+.rating {
+	margin-right: 4vmin;
+	background-color: indigo;
+	color: white;
+	padding: 0 2vmin;
+	border-radius: 3vmin;
+	border: thick solid white;
+	font-size: 4vmin;
+}
+
+.content {
+	font-size: 3vmin;
+}
+
+.title-link {
+	margin-right: 2vmin;
+}
+
+.author-score {
+	margin: 4vmin;
+	background-color: white;
+	border: thick solid lightskyblue;
+	border-radius: 1vmin;
+	text-align: center;
+	padding: 1vmin;
+}
+
+table, th, td {
+	margin-left: 10vmin;
+	border: thick solid white;
+	border-radius: 1vmin;
+	padding: 1vmin;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: lightskyblue;
+}
+
+p, h3 {
+	margin-left: 10vmin;
+}
+
+input[type=submit] {
+	background-color: white;
+	border: thick solid lightskyblue;
+	border-radius: 1vmin;
+	padding: 1vmin;
+	font-family: 'Concert One', cursive;
+	font-size: 3vmin;
+	margin-left: 2vmin;
+	margin-bottom: 4vmin;
+}
+
+.reviews > form {
+	margin-left: 4vmin;
+}
+
+select {
+	background-color: white;
+	border: thick solid lightskyblue;
+	border-radius: 1vmin;
+	padding: 2vmin;
+	font-family: 'Concert One', cursive;
+	font-size: 4vmin;
+	vertical-align: top;
+	margin-right: 1vmin;
+}
+
+textarea, input[type=text] {
+	background-color: white;
+	border: thick solid lightskyblue;
+	border-radius: 1vmin;
+	padding: 1vmin;
+	font-family: 'Concert One', cursive;
+	font-size: 3vmin;
+	width: 80%;
+	margin-bottom: 2vmin;
+}
+
+input[type=text] {
+	width: 74%;
+}
+
+.new-recipe {
+	margin: 10vmin;
+	font-size: 4vmin;
 }
