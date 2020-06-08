@@ -5,7 +5,14 @@
 		<label>Title: <input type="text" name="title" required><%= recipe.title %></label><br><br>
 		<label>Ingredients:</label><br><br>
 		<textarea name="ingredients" rows="8" required placeholder="Use the following format:&#10;Ingredient, Amount&#10;&#10;Example:&#10;Salt, 1tbsp&#10;Pepper, 3tsp">
-			
+			<% let result = ''; %>
+			<% for (let key in recipe.ingredients) { %>
+				<% result += key; %>
+				<% result += ', '; %>
+				<% result += recipe.ingredients[key]; %>
+				<% result += '&#10;'; %>
+			<% } %>
+			<%= result %>
 		</textarea>
 		<br><br>
 		<label>Instructions:</label><br><br>

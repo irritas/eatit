@@ -30,7 +30,8 @@ Technologies Used
 * HTML
 * CSS
 * Javascript
-* Node Express
+* Node.js
+* Express
 * MongoDB
 * Mongoose
 * heroku
