@@ -7,7 +7,9 @@ module.exports = {
 	new: newRecipe,
 	show,
 	create,
-	delete: deleteRecipe
+	delete: deleteRecipe,
+	edit,
+	update
 };
 
 function index(req, res, next) {
@@ -91,5 +93,29 @@ function create(req, res) {
 function deleteRecipe(req, res) {
 	Recipe.findByIdAndRemove(req.params.id, recipe => {
 	  	res.redirect('/recipes');
+	});
+}
+
+function edit(req, res) {
+	Recipe.findById(req.params.id, (err, recipe) => {
+		res.render(`recipes/edit`, {
+			title: `Edit ${recipe.title}`,
+			user: res.locals.user,
+			recipe
+		});
+	});
+}
+
+function update(req, res) {
+	req.body.owner = res.locals.user;
+	let ingredients = {};
+	req.body.ingredients.split(/\s*\n\s*/).forEach(p => {
+		const pair = p.split(/\s*,\s*/);
+		if (pair[0] && pair[1]) ingredients[pair[0]] = pair[1];
+	});
+	req.body.ingredients = ingredients;
+	Recipe.findByIdAndUpdate(req.params.id, req.body, {new: true})
+	.then((recipe) => {
+		res.redirect(`/recipes/${recipe._id}`);
 	});
 }

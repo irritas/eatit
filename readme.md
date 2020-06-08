@@ -52,3 +52,4 @@ Next Steps
 * Add editing functionality
 * Add sorting
 * Add image support
+* Comment editing and deletion
