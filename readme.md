@@ -9,19 +9,19 @@ Screenshots
 
 **_Landing Page:_**
 
-![](https://github.com/irritas/tetris/blob/master/images/intro.PNG "Landing Page")
+![](https://github.com/irritas/eatit/blob/master/public/images/landing.PNG "Landing Page")
 
 **_View Recipe:_**
 
-![](https://github.com/irritas/tetris/blob/master/images/gamemobile.PNG "View Recipe")
+![](https://github.com/irritas/eatit/blob/master/public/images/view.PNG "View Recipe")
 
 **_Add Recipe:_**
 
-![](https://github.com/irritas/tetris/blob/master/images/gamenormal.PNG "Add Recipe")
+![](https://github.com/irritas/eatit/blob/master/public/images/addnew.PNG "Add Recipe")
 
 **_User Profile:_**
 
-![](https://github.com/irritas/tetris/blob/master/images/gameover.PNG "User Profile")
+![](https://github.com/irritas/eatit/blob/master/public/images/profile.PNG "User Profile")
 
 
 Technologies Used
