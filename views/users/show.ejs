@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<div class="recipes">
+	<h2>My Recipes</h2>
+	<% recipes.forEach(recipe => { %>
+		<div class="container">
+			<span class="rating"><%= recipe.rating %> </span>
+			<a href="/recipes/<%= recipe._id %>" class="title-link"><%= recipe.title %></a>
+		</div>
+	<% }) %>
+</div>
+
+<div class="reviews">
+	<h2>Reviews</h2>
+	<% reviews.forEach(review => { %>
+		<div class="container">
+			<a href="/recipes/<%= review.recipe %>" class="title-link"><%= review.title %>:</a>
+			<span class="rating"><%= review.rating %></span>
+			<span><%= review.content %></span>
+		</div>
+	<% }) %>
+</div>
+
+<%- include('../partials/footer') %>

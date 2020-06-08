@@ -9,9 +9,11 @@
 <body>
     <nav>
 		<div id="nav-left">
-			<span><a href="/recipes">All Recipes</a></span>
+			<span class="logo">EATIT</span>
+			<a href="/recipes">All Recipes</a>
 			<% if (user) { %>
-				<span><a href="/recipes/new">Add Recipe</a></span>
+				<a href="/recipes/new">Add Recipe</a>
+				<a href="/users/<%= user._id %>">Profile</a>
 			<% } %>
 		</div>
         <div id="nav-right">

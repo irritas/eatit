@@ -4,7 +4,8 @@ var recipesCtrl = require('../controllers/recipes');
 
 router.get('/', recipesCtrl.index);
 router.get('/new', recipesCtrl.new);
-// router.get('/:id', recipesCtrl.show);
-// router.post('/', recipesCtrl.create);
+router.get('/:id', recipesCtrl.show);
+router.post('/', recipesCtrl.create);
+router.delete('/:id', recipesCtrl.delete);
 
 module.exports = router;

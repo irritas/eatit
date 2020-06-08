@@ -6,12 +6,14 @@ var recipeSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
-	image: String,
 	ingredients: {
-		type: [String],
+		type: Object,
 		required: true
 	},
-	instructions: String,
+	instructions: {
+		type: String,
+		required: true
+	},
 	rating: {
 		type: Number,
 		default: 0
@@ -20,13 +22,10 @@ var recipeSchema = new mongoose.Schema({
 		type: Date,
 		default: Date.now
 	},
-	reviews: [{
-		type: Schema.Types.ObjectId,
-		ref: 'Comment'
-	}],
 	owner: {
 		type: Schema.Types.ObjectId,
-		ref: 'User'
+		ref: 'User',
+		required: true
 	}
 }, {
 	timestamps: true

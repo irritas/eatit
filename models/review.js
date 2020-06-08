@@ -7,9 +7,10 @@ var reviewSchema = new mongoose.Schema({
 		required: true
 	},
 	content: String,
-	likes: {
+	title: String,
+	rating: {
 		type: Number,
-		default: 0
+		required: true
 	},
 	date: {
 		type: Date,
@@ -17,7 +18,12 @@ var reviewSchema = new mongoose.Schema({
 	},
 	owner: {
 		type: Schema.Types.ObjectId,
-		ref: 'User'
+		ref: 'User',
+		required: true
+	},
+	recipe: {
+		type: Schema.Types.ObjectId,
+		ref: 'Recipe'
 	}
 }, {
 	timestamps: true

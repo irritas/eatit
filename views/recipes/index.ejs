@@ -1,3 +1,29 @@
 <%- include('../partials/header') %>
-<h3><%= user ? user.name : "Not logged in" %></h3>
+
+<!-- <div id="search-sort" class="row">
+	<form action="/recipes" method="GET">
+		<div class="search">
+			<input id="search" type="search" name="title" placeholder="Search Recipe" autocomplete="off">
+		</div>
+		<div class="sort">
+			<select id="sort" name="sort">
+				<option value="date-r">Newest</option>
+				<option value="date">Oldest</option>
+				<option value="rating">Rating</option>
+				<option value="title">A-Z</option>
+				<option value="title-r">Z-A</option>
+			</select>
+		</div>
+	</form>
+</div> -->
+
+<div class="recipes">
+	<% recipes.forEach(recipe => { %>
+		<div class="container">
+			<span class="rating"><%= recipe.rating %> </span>
+			<a href="/recipes/<%= recipe._id %>" class="title-link"><%= recipe.title %></a>
+		</div>
+	<% }) %>
+</div>
+
 <%- include('../partials/footer') %>
