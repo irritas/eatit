@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<% if (user) { %>
+	<form class="new-recipe" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
+		<label>Title: <input type="text" name="title" required><%= recipe.title %></label><br><br>
+		<label>Ingredients:</label><br><br>
+		<textarea name="ingredients" rows="8" required placeholder="Use the following format:&#10;Ingredient, Amount&#10;&#10;Example:&#10;Salt, 1tbsp&#10;Pepper, 3tsp">
+			
+		</textarea>
+		<br><br>
+		<label>Instructions:</label><br><br>
+		<textarea name="instructions" rows="16" required placeholder="Enter instructions here"><%= recipe.instructions %></textarea>
+		<br><br>
+		<input type="submit" value="Save Recipe">
+	</form>
+<% } else { %>
+	<div class="denied">ACCESS DENIED</div>
+<% } %>
+
+<%- include('../partials/footer') %>

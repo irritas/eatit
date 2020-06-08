@@ -1,7 +1,7 @@
-Tetris
+EATIT
 ======
 
-Tetris is a classic game that was originally created by a Russian developer in 1984. The goal of the game is to move randomly spawned blocks called "tetrominoes" and create lines across the board.
+EATIT is a blog where you can share recipes and review them.
 
 
 Screenshots
